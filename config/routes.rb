@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   # PostsController
   get 'posts/new', to: 'posts#new', as: 'new_post'
   get '/topics/new', to: 'topics#new'
-  get '/topics/edit', to: 'topics#edit' as: 'edit_topics'
+  get 'topics/edit', to: 'topics#edit' , as: 'edit_topics'
 end
