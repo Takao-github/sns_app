@@ -1,10 +1,15 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!
   def index
-    # ここにindexアクションで行いたい処理を書くことができます
-    # 例えば、全ての投稿を取得するなど
+    render :index # renders app/views/posts/index.html.erb
   end
-  
+
   def new
-    render :new
+    render :new # renders app/views/posts/new.html.erb
+  end
+
+  # このActionを追加
+  def create
+    redirect_to new_post_path # redirects to GET "/posts/new"
   end
 end
