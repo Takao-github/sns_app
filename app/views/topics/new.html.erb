@@ -1,6 +1,9 @@
-<div>
-  <h1>reate a new topic</h1>
-  <from>
-    課題です
-  </from>
-</div>
+<%= form_with(url: create_topic_path, local: true, method: :post) do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Create" %>
+  </div>
+<% end %>
