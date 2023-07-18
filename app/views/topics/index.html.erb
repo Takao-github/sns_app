@@ -1,0 +1,10 @@
+<h1>Topics</h1>
+
+<ul>
+  <% @topics.each do |topic| %>
+    <li>
+      <h2><%= link_to topic.title, topic_path(topic) %></h2>
+      <p><%= topic.content %></p>
+    </li>
+  <% end %>
+</ul>
